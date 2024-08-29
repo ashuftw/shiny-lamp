@@ -1,36 +1,36 @@
-// Default Colors
-$theme: hsl(172, 99%, 26%) !default;
-$text: hsl(204, 28%, 93%) !default;
-$light-grey: #494f5c !default;
-$dark-grey: #3b3e48 !default;
-$highlight-grey: #7d828a !default;
-$midnightblue: #2c3e50 !default;
-$typewriter: hsl(172, 100%, 36%) !default;
+// Main Colors (from our previous discussion)
+$theme: #0f0d0b !default;  // Very dark brown, almost black
+$text: #f0e6d9 !default;   // Light beige for main text
+$light-grey: #2c2520 !default;  // Slightly lighter than theme for subtle highlights
+$dark-grey: #5a4d40 !default;   // Medium brown for secondary elements
+$highlight-grey: #8c7a6b !default;  // Light brown for hover effects
+$midnightblue: #e0d6c9 !default;    // Very light beige for maximum contrast
+$typewriter: #b3a396 !default;  // Muted light brown for typewriter effect
 
-// Scroll to Top Default colors
-$stt-stroke: #ccc !default;
-$stt-circle: #3b3e48 !default;
-$stt-arrow: #018574 !default;
+// Scroll to Top Colors
+$stt-stroke: #5a4d40 !default;  // Medium brown, similar to $dark-grey
+$stt-circle: #342e29 !default;  // Slightly lighter than theme, similar to $light-grey
+$stt-arrow: #8c7a6b !default;   // Light brown, similar to $highlight-grey
 
-//Admonition colors
+// Admonition Colors
 $admonition-background: (
-    "note": rgba(68, 138, 255, 0.1),
-    "info": rgba(0, 184, 212, 0.1),
-    "tip": rgba(0, 191, 165, 0.1),
-    "success": rgba(0, 200, 83, 0.1),
-    "warning": rgba(255, 145, 0, 0.1),
-    "failure": rgba(255, 82, 82, 0.1),
-    "danger": rgba(255, 23, 68, 0.1),
-    "bug": rgba(245, 0, 87, 0.1),
-    ) !default;
+  "note": rgba(140, 122, 107, 0.2),     // Light brown
+  "info": rgba(176, 156, 127, 0.2),     // Lighter brown
+  "tip": rgba(224, 214, 201, 0.2),      // Very light beige
+  "success": rgba(144, 172, 102, 0.2),  // Muted green
+  "warning": rgba(235, 177, 108, 0.2),  // Muted orange
+  "failure": rgba(235, 134, 108, 0.2),  // Muted red
+  "danger": rgba(235, 108, 108, 0.2),   // Brighter muted red
+  "bug": rgba(235, 108, 171, 0.2),      // Muted pink
+) !default;
 
 $admonition-color: (
-    "note": #448aff,
-    "info": #00b8d4,
-    "tip": #00bfa5,
-    "success": #00c853,
-    "warning": #ff9100,
-    "failure": #ff5252,
-    "danger": #ff1744,
-    "bug": #f50057,
-    ) !default;
+  "note": #8c7a6b,     // Light brown
+  "info": #b09c7f,     // Lighter brown
+  "tip": #e0d6c9,      // Very light beige
+  "success": #90ac66,  // Muted green
+  "warning": #ebb16c,  // Muted orange
+  "failure": #eb866c,  // Muted red
+  "danger": #eb6c6c,   // Brighter muted red
+  "bug": #eb6cab,      // Muted pink
+) !default;

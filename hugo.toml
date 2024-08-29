@@ -12,20 +12,11 @@ defaultContentLanguageInSubdir = true
 
 [languages]
   [languages.en]
-    title = 'Hermit - V2'
+    title = 'Ashuthosh Shridhar'
     [languages.en.params]
-      homeSubtitle = "Hi! I'm Ashuthosh Shridhar."
+      homeSubtitle = "If I'm not for myself, who is? If I'm only for myself, who am I?"
     weight = 1
-  [languages.fr]
-    title = 'Hermit - V2 (FR)'
-    [languages.fr.params]
-      homeSubtitle = "Poursuivre l'héritage d'Hermit avec un thème minimal et rapide"
-    weight = 2
-  [languages.it]
-    title = 'Hermit - V2 (IT)'
-    [languages.it.params]
-      homeSubtitle = "Continuare l'eredità di Hermit di essere un tema minimale e veloce"
-    weight = 3
+
  
 languageCode = "en-us"
 
@@ -57,7 +48,7 @@ expiryDate = ["expiryDate"]
 
 [params.author]
   name = "BLZR"
-  about = "about-hugo"
+  about = "about-me"
 
 [blackfriday]
   # hrefTargetBlank = true
@@ -91,7 +82,7 @@ expiryDate = ["expiryDate"]
   themeColor = "#494f5c"
 
   #homeSubtitle = "Continuing Hermit's legacy to be minimal and fast theme"
-  footerCopyright = ' <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+# footerCopyright = ' <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   # bgImg = ""
   # gitUrl = "https://github.com/1bl4z3r/hermit-V2/tree/staging"
 
@@ -114,22 +105,32 @@ expiryDate = ["expiryDate"]
   # pinnedSVGname = "pin"
   descriptionInPosts = true
   # initialPublish = "Initally Posted on: "
-  human = ["single","posts"]
+  # human = ["single","posts"]
 
 
 
-  [[params.socialLinks]]
+#  [[params.socialLinks]]
     name = "github"
     url = "https://github.com/1bl4z3r/hermit-V2/tree/staging"
 
 [menu]
 
+#  [[menu.main]]
+#    name = "Posts"
+#    url = "posts/"
+#    weight = 10
+  
   [[menu.main]]
-    name = "Posts"
-    url = "posts/"
+    name = "blog"
+    url = "https://ashuftw.substack.com/"
     weight = 10
 
   [[menu.main]]
-    name = "About"
-    url = "about-hugo/"
+    name = "notes"
+    url = "https://notes.ashuftw.com/"
+    weight = 10
+
+  [[menu.main]]
+    name = "about"
+    url = "about-me/"
     weight = 20

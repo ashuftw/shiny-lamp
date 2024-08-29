@@ -76,7 +76,7 @@ custom_css = ["custom_css/foo.css","custom_css/bar.css"]
 custom_js = ["custom_js/custom-about.js"]
 ```
 
-The files itself will reside in `assets` directory. Refer to [Staging Branch](https://github.com/1bl4z3r/hermit-V2/tree/staging) to have a feel on how [this](https://github.com/1bl4z3r/hermit-V2/blob/staging/content/about-hugo.md) is implemented.
+The files itself will reside in `assets` directory. Refer to [Staging Branch](https://github.com/1bl4z3r/hermit-V2/tree/staging) to have a feel on how [this](https://github.com/1bl4z3r/hermit-V2/blob/staging/content/about-me.md) is implemented.
 
 ### Custom styles
 
