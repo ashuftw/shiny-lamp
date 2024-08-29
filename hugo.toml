@@ -1,6 +1,6 @@
 baseURL = "https://ashuftw.com"
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 
 # [outputs]
 #   home = ['html', 'rss']
