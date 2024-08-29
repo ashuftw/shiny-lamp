@@ -132,5 +132,5 @@ expiryDate = ["expiryDate"]
 
   [[menu.main]]
     name = "about"
-    url = "about-me/"
+    url = "/about-me"
     weight = 20
