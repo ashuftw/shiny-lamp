@@ -14,7 +14,7 @@ defaultContentLanguageInSubdir = true
   [languages.en]
     title = 'Hermit - V2'
     [languages.en.params]
-      homeSubtitle = "Continuing Hermit's legacy to be minimal and fast theme"
+      homeSubtitle = "Hi! I'm Ashuthosh Shridhar."
     weight = 1
   [languages.fr]
     title = 'Hermit - V2 (FR)'
