@@ -7,5 +7,6 @@ custom_js = ["custom_js/custom-about.js"]
 
 I study Computational Science at [TU-Braunschweig](https://www.tu-braunschweig.de), where I also work as a Research Assistant in the [Particle Simulation & Functional Structures](https://www.tu-braunschweig.de/en/ipat/research/particle-simulation-functional-structures) work group.
 
+[CV](CV.pdf)
 
 
