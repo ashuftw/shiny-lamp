@@ -9,4 +9,3 @@ I study Computational Science at [TU-Braunschweig](https://www.tu-braunschweig.d
 
 [CV](CV.pdf)
 
-
