@@ -1,45 +1,9 @@
-// Main Colors
-$theme: #0f0d0b !default; // Very dark brown, almost black (from your darkMode.light)
-$text: #e0d6c9 !default; // Very light beige (from your darkMode.dark)
-$light-grey: #0f0d0b !default; // #2c2520 // Slightly lighter than theme (from your darkMode.lightgray)
-$dark-grey: #2c2520 !default; // #5a4d40 // Medium brown (from your darkMode.gray)
-$highlight-grey: #8c7a6b !default; // Light brown (from your darkMode.secondary)
-$midnightblue: #f0e6d9 !default; // Light beige (from your darkMode.tertiary)
-$typewriter: #b3a396 !default; // Muted light brown (from your darkMode.darkgray)
-
-// Scroll to Top Colors
-$stt-stroke: #5a4d40 !default; // Medium brown (from your darkMode.gray)
-$stt-circle: #2c2520 !default; // Slightly lighter than theme (from your darkMode.lightgray)
-$stt-arrow: #8c7a6b !default; // Light brown (from your darkMode.secondary)
-
-// Admonition Colors
-$admonition-background: (
-  "note": rgba(140, 122, 107, 0.15), // Light brown with reduced opacity (from your darkMode.highlight)
-  "info": rgba(176, 156, 127, 0.15), // Lighter brown with reduced opacity
-  "tip": rgba(224, 214, 201, 0.15), // Very light beige with reduced opacity
-  "success": rgba(144, 172, 102, 0.15), // Muted green with reduced opacity
-  "warning": rgba(235, 177, 108, 0.15), // Muted orange with reduced opacity
-  "failure": rgba(235, 134, 108, 0.15), // Muted red with reduced opacity
-  "danger": rgba(235, 108, 108, 0.15), // Brighter muted red with reduced opacity
-  "bug": rgba(235, 108, 171, 0.15), // Muted pink with reduced opacity
-) !default;
-
-$admonition-color: (
-  "note": #8c7a6b, // Light brown (from your darkMode.secondary)
-  "info": #b3a396, // Muted light brown (from your darkMode.darkgray)
-  "tip": #f0e6d9, // Light beige (from your darkMode.tertiary)
-  "success": #90ac66, // Keeping muted green
-  "warning": #ebb16c, // Keeping muted orange
-  "failure": #eb866c, // Keeping muted red
-  "danger": #eb6c6c, // Keeping brighter muted red
-  "bug": #eb6cab, // Keeping muted pink
-) !default;
-
 // Main Colors (from our previous discussion)
-$theme: #0f0d0b !default;  // Very dark brown, almost black
+//$theme: #0f0d0b !default;  // Very dark brown, almost black
+$theme: #1e1916 !default;  // Very dark brown, almost black
 $text: #f0e6d9 !default;   // Light beige for main text
-$light-grey: #2c2520 !default;  // Slightly lighter than theme for subtle highlights
-$dark-grey: #5a4d40 !default;   // Medium brown for secondary elements
+$light-grey: #0f0d0b !default;  // 2c2520 //Slightly lighter than theme for subtle highlights
+$dark-grey: #2c2520 !default;   // 5a4d40 // Medium brown for secondary elements
 $highlight-grey: #8c7a6b !default;  // Light brown for hover effects
 $midnightblue: #e0d6c9 !default;    // Very light beige for maximum contrast
 $typewriter: #b3a396 !default;  // Muted light brown for typewriter effect
