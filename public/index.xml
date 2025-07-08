@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ashuthosh Shridhar</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Ashuthosh Shridhar</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 29 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About me</title>
+      <link>http://localhost:1313/about-me/</link>
+      <pubDate>Thu, 29 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about-me/</guid>
+      <description>&lt;p&gt;I study Computational Science at &lt;a href=&#34;https://www.tu-braunschweig.de&#34;&gt;TU-Braunschweig&lt;/a&gt;, where I also work as a Research Assistant in the &lt;a href=&#34;https://www.tu-braunschweig.de/en/ipat/research/particle-simulation-functional-structures&#34;&gt;Particle Simulation &amp;amp; Functional Structures&lt;/a&gt; work group.&lt;/p&gt;&#xA;&lt;h1 id=&#34;experience&#34;&gt;Experience&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.iri-thesys.org/&#34;&gt;&lt;strong&gt;IRI THESys&lt;/strong&gt;&lt;/a&gt;, Humboldt University of Berlin | Visiting Scholar | &lt;em&gt;April 2025 - Current&lt;/em&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.tu-braunschweig.de/ipat&#34;&gt;&lt;strong&gt;iPAT&lt;/strong&gt;&lt;/a&gt;, TU Braunschweig | Research Assistant | &lt;em&gt;Oct 2023 - Current&lt;/em&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.tu.berlin/ilr&#34;&gt;&lt;strong&gt;ILR&lt;/strong&gt;&lt;/a&gt;, TU Berlin | Research Assistant (Studienarbeit) | &lt;em&gt;Oct 2024 - March 2025&lt;/em&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.tu-braunschweig.de/ism&#34;&gt;&lt;strong&gt;ISM&lt;/strong&gt;&lt;/a&gt;, TU Braunschweig | Research Assistant | &lt;em&gt;Jan 2023 - Oct 2023&lt;/em&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://cfd.fossee.in&#34;&gt;&lt;strong&gt;FOSSEE&lt;/strong&gt;&lt;/a&gt;, IIT Bombay | Research Assistant | &lt;em&gt;Mar 2022 - Sep 2022&lt;/em&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.isro.gov.in/ISTRAC.html&#34;&gt;&lt;strong&gt;ISTRAC&lt;/strong&gt;&lt;/a&gt;, ISRO | Intern | &lt;em&gt;Jan 2020 - Mar 2020&lt;/em&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/foo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/foo/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

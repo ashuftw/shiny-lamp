@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Check if ImageMagick is installed
+if ! command -v convert &> /dev/null
+then
+    echo "ImageMagick is not installed. Installing now..."
+    sudo apt-get update && sudo apt-get install -y imagemagick
+fi
+
+# Check if favicon.svg exists
+if [ ! -f "favicon.svg" ]; then
+    echo "favicon.svg not found in the current directory."
+    exit 1
+fi
+
+input_file="favicon.svg"
+output_file="favicon.ico"
+
+# Create temporary directory
+temp_dir=$(mktemp -d)
+
+# Convert SVG to multiple PNG sizes
+sizes=(16 32 48 64 128 256)
+for size in "${sizes[@]}"; do
+    convert -background none -size ${size}x${size} "$input_file" "${temp_dir}/favicon-${size}.png"
+done
+
+# Combine PNGs into ICO
+convert "${temp_dir}/favicon-*.png" "$output_file"
+
+# Clean up temporary files
+rm -r "$temp_dir"
+
+echo "ICO file created: $output_file"
+echo "ICO file contains the following sizes: ${sizes[*]}"

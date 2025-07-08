@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Check if ImageMagick is installed
+if ! command -v convert &> /dev/null
+then
+    echo "ImageMagick is not installed. Please install it first."
+    exit 1
+fi
+
+# Check if icon.png exists
+if [ ! -f "icon.png" ]; then
+    echo "icon.png not found in the current directory."
+    exit 1
+fi
+
+# Convert to various sizes and formats
+convert icon.png -resize 192x192 android-chrome-192x192.png
+convert icon.png -resize 384x384 android-chrome-384x384.png
+convert icon.png -resize 180x180 apple-touch-icon.png
+convert icon.png -resize 16x16 favicon-16x16.png
+convert icon.png -resize 32x32 favicon-32x32.png
+convert icon.png -resize 150x150 mstile-150x150.png
+
+echo "Conversion complete. All icon formats have been created."
