@@ -11,11 +11,6 @@
 	.home-subtitle {
 		min-height: 1.5em;
 	}
-	
-	@keyframes blink {
-		0%, 50% { border-color: transparent; }
-		51%, 100% { border-color: currentColor; }
-	}
 	</style>
 {{ end }}
 
@@ -39,45 +34,53 @@
 	</div>
 
 	<script>
-	const quotes = [
-		"'If I'm not for myself, who is? If I'm only for myself, who am I?' - Hillel the Elder",
-		"'Beautiful things don't ask for attention.'",
-		"'It is just us and in the firmament above, the light of a billion billion dying stars' - Alain de Botton",
-		"'If it isn't good, let it die. If it doesn't die, make it good' - Ajahn Chah",
-		"'What make night within us may leave stars' - Victor Hugo",
-		"'The moment siezes us.'",
-		"'When the soul lies down in that grass, the world is too full to talk about.' - Rumi",
-		"'And when the earth shall claim your limbs, then shall you truly dance.' - Khalil Gibran",
-		"'The highest form of knowledge is empathy for it require us to suspend our egos and live in another's world' - Plato",
-		"'Between what is said and not meant, and what is meant and not said, most of love is lost.' - Khalil Gibran",  
-		"'If I am worth anything later, I am worth something now. For wheat is wheat, even if poeple think it is a grass in the beginning' - Vincent van Gogh",
-		"'Funny how it goes. In the matter of conversation, only by leaving the body do we occupy it.' - Adyashanti"
-	];
+	(function() {
+		const quotes = [
+			"'If I'm not for myself, who is? If I'm only for myself, who am I?' - Hillel the Elder",
+			"'Beautiful things don't ask for attention.'",
+			"'It is just us and in the firmament above, the light of a billion billion dying stars' - Alain de Botton",
+			"'If it isn't good, let it die. If it doesn't die, make it good' - Ajahn Chah",
+			"'What make night within us may leave stars' - Victor Hugo",
+			"'The moment seizes us.'",
+			"'When the soul lies down in that grass, the world is too full to talk about.' - Rumi",
+			"'And when the earth shall claim your limbs, then shall you truly dance.' - Khalil Gibran",
+			"'The highest form of knowledge is empathy for it requires us to suspend our egos and live in another's world' - Plato",
+			"'Between what is said and not meant, and what is meant and not said, most of love is lost.' - Khalil Gibran",  
+			"'If I am worth anything later, I am worth something now. For wheat is wheat, even if people think it is a grass in the beginning' - Vincent van Gogh",
+			"'Funny how it goes. In the matter of conversation, only by leaving the body do we occupy it.' - Adyashanti"
+		];
 
-	const subtitleElement = document.getElementById('home-subtitle');
-
-	function typeWriter(text) {
-		let i = 0;
-		subtitleElement.innerHTML = '';
-		
-		function type() {
-			if (i < text.length) {
-				subtitleElement.innerHTML += text.charAt(i);
-				i++;
-				setTimeout(type, 80); // Typing speed (lower = faster)
+		function typeWriter(element, text) {
+			if (!element) return;
+			
+			let i = 0;
+			element.innerHTML = '';
+			
+			function type() {
+				if (i < text.length && element) {
+					element.innerHTML += text.charAt(i);
+					i++;
+					setTimeout(type, 80);
+				}
 			}
+			type();
 		}
-		type();
-	}
 
-	// Pick a random quote and type it once
-	function showRandomQuote() {
-		const randomIndex = Math.floor(Math.random() * quotes.length);
-		const selectedQuote = quotes[randomIndex];
-		typeWriter(selectedQuote);
-	}
+		function showRandomQuote() {
+			const subtitleElement = document.getElementById('home-subtitle');
+			if (!subtitleElement) return;
+			
+			const randomIndex = Math.floor(Math.random() * quotes.length);
+			const selectedQuote = quotes[randomIndex];
+			typeWriter(subtitleElement, selectedQuote);
+		}
 
-	// Start when page loads
-	document.addEventListener('DOMContentLoaded', showRandomQuote);
+		// Start when page loads
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', showRandomQuote);
+		} else {
+			showRandomQuote();
+		}
+	})();
 	</script>
 {{ end }}
