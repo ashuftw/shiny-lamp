@@ -6,6 +6,17 @@
 		<style>.bg-img {background-image: url('{{. | absURL}}');}</style>
 		{{- end -}}
 	{{- end -}}
+	
+	<style>
+	.home-subtitle {
+		min-height: 1.5em;
+	}
+	
+	@keyframes blink {
+		0%, 50% { border-color: transparent; }
+		51%, 100% { border-color: currentColor; }
+	}
+	</style>
 {{ end }}
 
 {{ define "main" }}
@@ -15,9 +26,7 @@
 	<div id="spotlight" class="animated fadeIn">
 		<div id="home-center">
 			<h1 id="home-title">{{ .Site.Title }}</h1>
-			{{- with .Site.Params.homeSubtitle }}
-			<p id="home-subtitle">{{.}}</p>
-			{{- end }}
+			<p id="home-subtitle" class="home-subtitle"></p>
 			{{- with .Site.Params.socialLinks }}
 			<div id="home-social">
 				{{ partialCached "social-icons.html" . }}
@@ -28,4 +37,39 @@
 			</nav>
 		</div>
 	</div>
+
+	<script>
+	const quotes = [
+		"'If I'm not for myself, who is? If I'm only for myself, who am I?'",
+		"'Beautiful things don't ask for attention.'",
+		"'It is just us and in the firmament above, the light of a billion billion dying stars'",
+	
+	];
+
+	const subtitleElement = document.getElementById('home-subtitle');
+
+	function typeWriter(text) {
+		let i = 0;
+		subtitleElement.innerHTML = '';
+		
+		function type() {
+			if (i < text.length) {
+				subtitleElement.innerHTML += text.charAt(i);
+				i++;
+				setTimeout(type, 80); // Typing speed (lower = faster)
+			}
+		}
+		type();
+	}
+
+	// Pick a random quote and type it once
+	function showRandomQuote() {
+		const randomIndex = Math.floor(Math.random() * quotes.length);
+		const selectedQuote = quotes[randomIndex];
+		typeWriter(selectedQuote);
+	}
+
+	// Start when page loads
+	document.addEventListener('DOMContentLoaded', showRandomQuote);
+	</script>
 {{ end }}
