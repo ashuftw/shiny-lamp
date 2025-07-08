@@ -5,7 +5,7 @@ custom_css = ["custom_css/foo.css","custom_css/bar.css"]
 custom_js = ["custom_js/custom-about.js"]
 +++
 
-I study Computational Science at [TU-Braunschweig](https://www.tu-braunschweig.de) and work on Direct Air Carbon Capture technologies. 
+I study Computational Science at [TU-Braunschweig](https://www.tu-braunschweig.de) and currently work on Direct Air Carbon Capture Technologies. 
 
 # Experience
 - [**IRI THESys**](https://www.iri-thesys.org/), Humboldt University of Berlin | Visiting Scholar | *April 2025 - Current*
