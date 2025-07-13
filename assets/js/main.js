@@ -20,6 +20,44 @@ const listen = (ele, e, callback) => {
   }
 }
 
+
+const displayRandomQuote = () => {
+  const quoteElement = document.getElementById('home-quote');
+  if (quoteElement) {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    const quote = quotes[randomIndex];
+    
+    // Clear previous content
+    quoteElement.textContent = '';
+    quoteElement.style.opacity = '1';
+    
+    // Create cursor element
+    const cursor = document.createElement('span');
+    cursor.className = 'typing-cursor';
+    cursor.textContent = '|';
+    
+    // Start typing animation
+    typeWriter(quote, quoteElement, cursor, 0);
+  }
+}
+
+const typeWriter = (text, element, cursor, index) => {
+  if (index < text.length) {
+    // Set the text content to the correct substring
+    element.textContent = text.substring(0, index + 1);
+    // and then append the cursor.
+    element.appendChild(cursor);
+    
+    // Continue typing
+    setTimeout(() => {
+      typeWriter(text, element, cursor, index + 1);
+    }, 50); // Adjust typing speed here (milliseconds per character)
+  } else {
+    // Typing complete - make cursor blink
+    cursor.style.animation = 'blink 1s infinite';
+  }
+}
+
 /**
  * Functions
  */
@@ -94,6 +132,10 @@ const toggleToc = () => {
   document.getElementById('toc').classList.toggle('show-toc');
 }
 
+// Initialize quote on page load
+document.addEventListener('DOMContentLoaded', () => {
+  displayRandomQuote();
+});
 
 if (header !== null) {
   listen('#menu-btn', "click", toggleMobileMenu);

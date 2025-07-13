@@ -27,6 +27,21 @@
 {{- block "main" . -}}{{ end -}}
 {{- block "footer" . -}}{{ end }}
 {{- partial "scroll-to-top.html" . }}
+{{- /*
+  Code block that helps read quotes from hugo.toml 
+  It defines window.quotes from your hugo.toml
+*/}}
+{{ if .Site.Params.quotes }}
+<script>
+  window.quotes = [
+    {{ range .Site.Params.quotes }}
+      "{{ . | safeJS }}",
+    {{ end }}
+  ];
+</script>
+{{ end }}
+{{- /* End of new block */ -}}
+
 {{- $main := resources.Get "js/main.js" -}}
 {{- if .Site.Params.code_copy_button | default true -}}
 	{{ $codeCopy := resources.Get "js/code-copy.js" -}}

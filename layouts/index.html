@@ -6,16 +6,48 @@
 		<style>.bg-img {background-image: url('{{. | absURL}}');}</style>
 		{{- end -}}
 	{{- end -}}
-	
 	<style>
-	.home-subtitle {
-		min-height: 1.5em;
-	}
-	
-	@keyframes blink {
-		0%, 50% { border-color: transparent; }
-		51%, 100% { border-color: currentColor; }
-	}
+		#home-quote {
+			font-style: italic;
+			color: #888;
+			margin: 1.5rem auto;
+			padding: 0 1rem;
+			text-align: center;
+			font-size: 1.0rem;
+			line-height: 1.6;
+			min-height: 4rem;
+			max-width: 800px;
+			word-wrap: break-word;
+			overflow-wrap: break-word;
+		}
+		
+		.typing-cursor {
+			color: #888;
+			font-weight: normal;
+			font-style: normal;
+			animation: none;
+			margin-left: 2px;
+		}
+		
+		@keyframes blink {
+			0%, 50% { opacity: 1; }
+			51%, 100% { opacity: 0; }
+		}
+		
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			#home-quote {
+				font-size: 1rem;
+				padding: 0 1.5rem;
+			}
+		}
+		
+		@media (max-width: 480px) {
+			#home-quote {
+				font-size: 0.95rem;
+				padding: 0 1rem;
+			}
+		}
 	</style>
 {{ end }}
 
@@ -23,12 +55,15 @@
 	{{- if (or .Site.Params.images .Site.Params.bgImg) }}
 	<div class="bg-img"></div>
 	{{- end }}
-	<div id="spotlight" class="animated fadeIn">
+	<div id="spotlight" {{- if ne false .Site.Params.usesAnimation }} class="animated fadeIn" {{- end -}}>
 		<div id="home-center">
 			<h1 id="home-title">{{ .Site.Title }}</h1>
-			<p id="home-subtitle" class="home-subtitle"></p>
+			{{- with .Site.Params.homeSubtitle }}
+			<p id="home-subtitle">{{.}}</p>
+			{{- end }}
+			<p id="home-quote"></p>
 			{{- with .Site.Params.socialLinks }}
-			<div id="home-social">
+			<div id="home-links">
 				{{ partialCached "social-icons.html" . }}
 			</div>
 			{{- end }}
@@ -36,52 +71,12 @@
 				{{ partialCached "menu.html" . }}
 			</nav>
 		</div>
+		<div id="home-footer">
+			{{- if templates.Exists "partials/index-footer.html" -}}
+				{{- partialCached "index-footer.html" . -}}
+			{{- else if templates.Exists "partials/footer.html" -}}
+				{{- partial "footer.html" . -}}
+			{{- end -}}
+		</div>
 	</div>
-
-	<script>
-	const quotes = [
-		"'If I'm not for myself, who is? If I'm only for myself, who am I?'",
-		"'Beautiful things don't ask for attention.'",
-		"'If it isn't good, let it die. If it doesn't die, make it good'",
-		"'What make night within us may leave stars'",
-		"'The moment siezes us.'",
-		"'No self, no problem.'",
-		"'Angels can fly because they take themselves lightly.'",
-		"'The limits of my languange means the limits of my world.'",
-		//"'When the soul lies down in that grass, the world is too full to talk about.'",
-		"'And when the earth shall claim your limbs, then shall you truly dance.'",
-		"'The highest form of knowledge is empathy.'",
-		"'L'essentiel est invisible pour les yeux.'",
-		"'Mr. Duffy lived a short distance from his body.'",
-		//"'Between what is said and not meant, and what is meant and not said, most of love is lost.'",  
-		"'If I am worth anything later, I am worth something now. For wheat is wheat, even if people think it is a grass in the beginning'",
-		//"'Funny how it goes. In the matter of conversation, only by leaving the body do we occupy it.'"
-	];
-
-	const subtitleElement = document.getElementById('home-subtitle');
-
-	function typeWriter(text) {
-		let i = 0;
-		subtitleElement.innerHTML = '';
-		
-		function type() {
-			if (i < text.length) {
-				subtitleElement.innerHTML += text.charAt(i);
-				i++;
-				setTimeout(type, 80); // Typing speed (lower = faster)
-			}
-		}
-		type();
-	}
-
-	// Pick a random quote and type it once
-	function showRandomQuote() {
-		const randomIndex = Math.floor(Math.random() * quotes.length);
-		const selectedQuote = quotes[randomIndex];
-		typeWriter(selectedQuote);
-	}
-
-	// Start when page loads
-	document.addEventListener('DOMContentLoaded', showRandomQuote);
-	</script>
 {{ end }}
