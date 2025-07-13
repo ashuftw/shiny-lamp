@@ -51,7 +51,7 @@ const typeWriter = (text, element, cursor, index) => {
     // Continue typing
     setTimeout(() => {
       typeWriter(text, element, cursor, index + 1);
-    }, 100); // Adjust typing speed here (milliseconds per character)
+    }, 70); // Adjust typing speed here (milliseconds per character)
   } else {
     // Typing complete - make cursor blink
     cursor.style.animation = 'blink 1s infinite';
