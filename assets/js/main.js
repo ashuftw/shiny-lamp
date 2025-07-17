@@ -34,7 +34,7 @@ const displayRandomQuote = () => {
     // Create cursor element
     const cursor = document.createElement('span');
     cursor.className = 'typing-cursor';
-    cursor.textContent = '█';
+    cursor.textContent = '▌';
     
     // Start typing animation
     typeWriter(quote, quoteElement, cursor, 0);
