@@ -89,14 +89,13 @@ expiryDate = ["expiryDate"]
 		"'The moment siezes us.'",
 		"'When the soul lies down in that grass, the world is too full to talk about.'― Rumi",
 		"'And when the earth shall claim your limbs, then shall you truly dance.'― Khalil Gibran",
-		"'The highest form of knowledge is empathy for it require us to suspend our egos and live in another's world'― Plato",
-		"'Between what is said and not meant, and what is meant and not said, most of love is lost.'― Khalil Gibran",  
+	#	"'Between what is said and not meant, and what is meant and not said, most of love is lost.'― Khalil Gibran",  
 		"'If I am worth anything later, I am worth something now. For wheat is wheat, even if people think it is grass in the beginning.'― Vincent van Gogh",
 		"'Funny how it goes. In the matter of conversation, only by leaving the body do we occupy it.'― Adyashanti",
-    "'The limits of my language mean the limits of my world'― Ludwig Wittgenstein",
     "'It all comes down to this - just let it be.'― Ajahn Chah",
+    "'We have to articulate ourselves, otherwise we would be cows in the field.'― Werner Herzog",
     "'Only that day dawns to which we are awake.'― Henry David Thoreau",
-    "'Conscious subjects and their mental lives are inescapable components of reality not describable by the physical sciences.'— Thomas Nagel"
+ #   "'Conscious subjects and their mental lives are inescapable components of reality not describable by the physical sciences.'— Thomas Nagel"
     ]
 
   # homeSubtitle = "Beautiful things don't ask for attention."
