@@ -21,42 +21,40 @@ const listen = (ele, e, callback) => {
 }
 
 
-const displayRandomQuote = () => {
-  const quoteElement = document.getElementById('home-quote');
-  if (quoteElement) {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    const quote = quotes[randomIndex];
-    
-    // Clear previous content
-    quoteElement.textContent = '';
-    quoteElement.style.opacity = '1';
-    
-    // Create cursor element
-    const cursor = document.createElement('span');
-    cursor.className = 'typing-cursor';
-    cursor.textContent = '▌';
-    
-    // Start typing animation
-    typeWriter(quote, quoteElement, cursor, 0);
-  }
-}
-
-const typeWriter = (text, element, cursor, index) => {
-  if (index < text.length) {
-    // Set the text content to the correct substring
-    element.textContent = text.substring(0, index + 1);
-    // and then append the cursor.
-    element.appendChild(cursor);
-    
-    // Continue typing
-    setTimeout(() => {
-      typeWriter(text, element, cursor, index + 1);
-    }, 70); // Adjust typing speed here (milliseconds per character)
-  } else {
-    // Typing complete - make cursor blink
-    cursor.style.animation = 'blink 1s infinite';
-  }
-}
+// Typing animation — replaced on the home page by a static hero image (#home-image).
+// The HTML element (<p id="home-quote">) and its CSS are commented out in layouts/index.html.
+// window.quotes is still populated from hugo.toml via layouts/_default/baseof.html;
+// remove that block too if the quotes config key is also dropped.
+//
+// const displayRandomQuote = () => {
+//   const quoteElement = document.getElementById('home-quote');
+//   if (quoteElement) {
+//     const randomIndex = Math.floor(Math.random() * quotes.length);
+//     const quote = quotes[randomIndex];
+//     quoteElement.textContent = '';
+//     quoteElement.style.opacity = '1';
+//     const cursor = document.createElement('span');
+//     cursor.className = 'typing-cursor';
+//     cursor.textContent = '▌';
+//     typeWriter(quote, quoteElement, cursor, 0);
+//   }
+// }
+//
+// const typeWriter = (text, element, cursor, index) => {
+//   if (index < text.length) {
+//     element.textContent = text.substring(0, index + 1);
+//     element.appendChild(cursor);
+//     setTimeout(() => {
+//       typeWriter(text, element, cursor, index + 1);
+//     }, 70); // typing speed in ms per character
+//   } else {
+//     cursor.style.animation = 'blink 1s infinite';
+//   }
+// }
+//
+// document.addEventListener('DOMContentLoaded', () => {
+//   displayRandomQuote();
+// });
 
 /**
  * Functions
@@ -131,11 +129,6 @@ const hideImg = () => {
 const toggleToc = () => {
   document.getElementById('toc').classList.toggle('show-toc');
 }
-
-// Initialize quote on page load
-document.addEventListener('DOMContentLoaded', () => {
-  displayRandomQuote();
-});
 
 if (header !== null) {
   listen('#menu-btn', "click", toggleMobileMenu);
