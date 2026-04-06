@@ -4,6 +4,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 {{- if (not (in .Page.RelPermalink "404")) -}}
 <meta name="robots" content="index, follow">
+<meta name="description" content="{{ .Page.Params.description | default .Site.Params.description }}">
 <meta name="revisit-after" content="15 days">
 {{- else -}}
 <meta name="robots" content="noindex, nofollow, noarchive">
