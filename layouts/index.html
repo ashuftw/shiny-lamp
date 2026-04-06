@@ -19,7 +19,7 @@
 		   Replaced the typing animation (#home-quote) with this static image. */
 	#home-image {
 		display: block;
-		margin: 1.5rem auto;
+		margin: 0.05rem auto;
 		max-width: 150px;
 		width: 40%;
 		height: auto;
@@ -84,7 +84,7 @@
 		<p id="home-subtitle">{{.}}</p>
 		{{- end }}
 		{{- /* Hero image — replaced the typing animation quote below. Image file lives in /static/. */}}
-		<img id="home-image" src="/static/230603-the-great-wave-jake-loris.png" alt="The Great Wave by Jake Loris">
+		<img id="home-image" src="/images/the-great-wave-jake-loris.png" alt="The Great Wave by Jake Loris">
 		{{- /* <p id="home-quote"></p> — previously rendered a random quote with a typewriter effect via
 		displayRandomQuote() in main.js */ -}}
 		{{- with .Site.Params.socialLinks }}
