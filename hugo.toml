@@ -151,6 +151,11 @@ expiryDate = ["expiryDate"]
     name = "pictures"
     url = "https://pics.ashuftw.com/"
     weight = 10
+  
+  [[menu.main]]
+    name = "ground control"
+    url = "https://gc.ashuftw.com/"
+    weight = 10
 
   [[menu.main]]
     name = "about"
