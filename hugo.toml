@@ -153,11 +153,6 @@ expiryDate = ["expiryDate"]
     weight = 10
   
   [[menu.main]]
-    name = "ground control"
-    url = "https://gc.ashuftw.com/"
-    weight = 10
-
-  [[menu.main]]
     name = "about"
     url = "/about-me"
     weight = 20
